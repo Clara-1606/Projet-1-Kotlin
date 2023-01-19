@@ -2,4 +2,13 @@
 <resources>
     <string name="app_name">Premier Projet</string>
     <string name="text_hello">Bonjour tout le monde !</string>
+    <string name="text_on_create">Méthode onCreate() appelée</string>
+    <string name="text_on_start">Méthode onStart() appelée</string>
+    <string name="text_on_resume">Méthode onResume() appelée</string>
+    <string name="text_on_stop">Méthode onStop() appelée</string>
+    <string name="text_on_pause">Méthode onPause() appelée</string>
+    <string name="text_on_restart">Méthode onRestart() appelée</string>
+    <string name="text_on_destroy">Méthode onDestroy() appelée</string>
+    <string name="text_finish">Méthode finish() appelée</string>
+    <string name="text_is_finishing">Méthode isFinishing() appelée</string>
 </resources>

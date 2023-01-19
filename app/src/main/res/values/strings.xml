@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">FirstProject</string>
     <string name="text_hello">Hello World !</string>
+    <string name="text_on_create">onCreate() method called</string>
+    <string name="text_on_start">onStart() method called</string>
+    <string name="text_on_resume">onResume() method called</string>
+    <string name="text_on_stop">onStop() method called</string>
+    <string name="text_on_pause">onPause() method called</string>
+    <string name="text_on_restart">onRestart() method called</string>
+    <string name="text_on_destroy">onDestroy() method called</string>
+    <string name="text_finish">finish() method called</string>
+    <string name="text_is_finishing">isFinishing() method called</string>
 </resources>

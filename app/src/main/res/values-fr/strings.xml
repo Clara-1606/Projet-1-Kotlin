@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Premier Projet</string>
-    <string name="text_hello">Bonjour tout le monde !</string>
     <string name="text_on_create">Méthode onCreate() appelée</string>
     <string name="text_on_start">Méthode onStart() appelée</string>
     <string name="text_on_resume">Méthode onResume() appelée</string>
@@ -11,4 +10,8 @@
     <string name="text_on_destroy">Méthode onDestroy() appelée</string>
     <string name="text_finish">Méthode finish() appelée</string>
     <string name="text_is_finishing">Méthode isFinishing() appelée</string>
+    <string name="text_hello"> Bonjour Kotlin ! </string>
+    <string name="text_question"> Comment allez-vous ? </string>
+    <string name="text_toast">Il ne fallait pas cliquer :O !</string>
+    <string name="text_button">Ne cliquez pas</string>
 </resources>

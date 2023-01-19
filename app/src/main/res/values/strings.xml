@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">FirstProject</string>
-    <string name="text_hello">Hello World !</string>
     <string name="text_on_create">onCreate() method called</string>
     <string name="text_on_start">onStart() method called</string>
     <string name="text_on_resume">onResume() method called</string>
@@ -10,4 +9,8 @@
     <string name="text_on_destroy">onDestroy() method called</string>
     <string name="text_finish">finish() method called</string>
     <string name="text_is_finishing">isFinishing() method called</string>
+    <string name="text_hello"> Hello Kotlin ! </string>
+    <string name="text_question"> How are you ? </string>
+    <string name="text_toast">You should not click :O !</string>
+    <string name="text_button">Dont click</string>
 </resources>

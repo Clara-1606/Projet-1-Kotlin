@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FirstProject</string>
-    <string name="text_hello">Hello World !</string>
+    <string name="text_hello"> Hello Kotlin ! </string>
+    <string name="text_question"> How are you ? </string>
+    <string name="text_toast">You should not click :O !</string>
+    <string name="text_button">Dont click</string>
 </resources>

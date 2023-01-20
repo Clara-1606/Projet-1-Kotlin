@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Bouton qui affiche une info toast
-        var buttonToast = findViewById<Button>(R.id.mainButton)
+        val buttonToast = findViewById<Button>(R.id.mainButton)
         buttonToast.setOnClickListener {
             Toast.makeText(this, R.string.text_toast, Toast.LENGTH_LONG).show()
         }

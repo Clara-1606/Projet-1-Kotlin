@@ -23,6 +23,6 @@ class ToggleQuestion(label : String, answers : List<Answer>) : Question(label, a
         layout.addView(rightText)
 
         return layout
-        //TODO : Clean with key value pair input
+        //TODO : Clean with key value pair input or two different variables
     }
 }

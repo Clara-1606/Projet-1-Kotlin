@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import com.ynov.firstproject.R
 import com.ynov.firstproject.quiz.model.answer.Answer
 import com.ynov.firstproject.quiz.model.question.*
@@ -51,11 +53,22 @@ class QuizActivity : AppCompatActivity() {
         )
 
         questions.add(
-            SliderQuestion("Do you like Hermione Granger ?",
+            AutoCompleteQuestion("Do you like Hermione Granger ?",
                 listOf (
                     Answer(10, "No"),
                     Answer(5, "Yes"),
                         ))
+        )
+
+        questions.add(
+            ImageQuestion("Which creature is your favorite ? ",
+                    mapOf(
+                        Pair(R.drawable.ic_android_black_24dp, Answer(4, "Hippogriffe")),
+                        Pair(R.drawable.baseline_10k_24, Answer(1, "Phoenix")),
+                        Pair(R.drawable.baseline_3d_rotation_24, Answer(7, "Niffleur")),
+                        Pair(R.drawable.baseline_4g_mobiledata_24, Answer(10, "Basilic"))
+                    )
+                )
         )
 
         val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)
@@ -65,13 +78,24 @@ class QuizActivity : AppCompatActivity() {
         showQuestion(questions[currentQuizIndex])
     }
 
-    fun showQuestion(question : Question) {
+    private fun showQuestion(question : Question) {
         val textQuestion = findViewById<TextView>(R.id.questionContent)
         textQuestion.text = question.label
         val questionView = question.buildAnswersWidgets(applicationContext)
+        val constraintLayout =  findViewById<ConstraintLayout>(R.id.answerLayout)
 
-        findViewById<LinearLayout>(R.id.answerLayout).removeAllViews()
-        findViewById<LinearLayout>(R.id.answerLayout).addView(questionView)
+        constraintLayout.removeAllViews()
+        questionView.id = View.generateViewId()
+
+        constraintLayout.addView(questionView)
+
+        val constraintSet = ConstraintSet()
+        constraintSet.clone(constraintLayout)
+        constraintSet.connect(questionView.id, ConstraintSet.TOP, constraintLayout.id, ConstraintSet.TOP)
+        constraintSet.connect(questionView.id, ConstraintSet.BOTTOM, constraintLayout.id, ConstraintSet.BOTTOM)
+        constraintSet.connect(questionView.id, ConstraintSet.LEFT, constraintLayout.id, ConstraintSet.LEFT)
+        constraintSet.connect(questionView.id, ConstraintSet.RIGHT, constraintLayout.id, ConstraintSet.RIGHT)
+        constraintSet.applyTo(constraintLayout)
     }
 
     fun handleAnswer(view: View) {
@@ -88,7 +112,7 @@ class QuizActivity : AppCompatActivity() {
         }
     }
 
-    fun updateNumberQuestion() {
+    private fun updateNumberQuestion() {
         val currentQuestion = findViewById<TextView>(R.id.currentQuestion)
         currentQuestion.text = (currentQuizIndex+1).toString()
 

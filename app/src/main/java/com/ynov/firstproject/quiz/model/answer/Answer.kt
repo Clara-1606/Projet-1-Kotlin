@@ -1,4 +1,4 @@
 package com.ynov.firstproject.quiz.model.answer
 
-class Answer (value : Int, label : String) {
+class Answer(var value : Int, var label : String) {
 }

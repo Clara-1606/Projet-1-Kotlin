@@ -5,17 +5,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.ynov.firstproject.R
-import com.ynov.firstproject.quiz.answer.CheckBoxFragment
-import com.ynov.firstproject.quiz.answer.SpinnerFragment
-import com.ynov.firstproject.quiz.model.Quiz
+import com.ynov.firstproject.quiz.model.question.RadioQuestion
 import com.ynov.firstproject.quiz.model.answer.Answer
-import com.ynov.firstproject.quiz.model.answer.GroupAnswers
+import com.ynov.firstproject.quiz.model.question.CheckBoxQuestion
+import com.ynov.firstproject.quiz.model.question.Question
 
 class QuizActivity : AppCompatActivity() {
 
-    private var quizzes = ArrayList<Quiz>()
+    private var questions = ArrayList<Question>()
     var currentQuizIndex : Int = 0
     var totalPoint : Int = 0
 
@@ -23,70 +23,62 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         createQuiz()
-
-
-
     }
 
     @SuppressLint("SetTextI18n")
     private fun createQuiz() {
-        quizzes.add(
-            Quiz(getString(R.string.question_profession),
-                CheckBoxFragment.newInstance(GroupAnswers(
-                    listOf (
-                        Answer(1, getString(R.string.answer_lawyer)),
-                        Answer(10, getString(R.string.answer_movie_star)),
-                        Answer(7, getString(R.string.answer_teacher)),
-                        Answer(4, getString(R.string.answer_author_novels)),
-                        Answer(1, getString(R.string.answer_company_manager)),
-                        Answer(7, getString(R.string.answer_landscaper)),
-                        Answer(7, getString(R.string.answer_craftsman)),
-                        Answer(10, getString(R.string.answer_butcher))
-                    )
-                ))
-            )
+
+        questions.add(
+            RadioQuestion(getString(R.string.question_profession), listOf (
+                Answer(1, getString(R.string.answer_lawyer)),
+                Answer(10, getString(R.string.answer_movie_star)),
+                Answer(7, getString(R.string.answer_teacher)),
+                Answer(4, getString(R.string.answer_author_novels)),
+                Answer(1, getString(R.string.answer_company_manager)),
+                Answer(7, getString(R.string.answer_landscaper)),
+                Answer(7, getString(R.string.answer_craftsman)),
+                Answer(10, getString(R.string.answer_butcher))
+            ))
         )
 
-        quizzes.add(
-            Quiz(getString(R.string.question_boggart),
-                CheckBoxFragment.newInstance(GroupAnswers(
+        questions.add(
+            CheckBoxQuestion(getString(R.string.question_boggart),
                     listOf (
                         Answer(1, getString(R.string.answer_snake)),
                         Answer(4, getString(R.string.answer_clown)),
                         Answer(7, getString(R.string.answer_spider)),
                         Answer(10, getString(R.string.answer_dementor))
                     )
-                ))
-            )
+            , 2) 
         )
 
         val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)
-        currentQuestion.text = quizzes.size.toString()
+        currentQuestion.text = questions.size.toString()
         updateNumberQuestion()
 
-        showQuestion(quizzes[currentQuizIndex])
+        showQuestion(questions[currentQuizIndex])
     }
 
-    fun showQuestion(quiz : Quiz) {
+    fun showQuestion(question : Question) {
         val textQuestion = findViewById<TextView>(R.id.questionContent)
-        textQuestion.text = quiz.question
-        val manager = supportFragmentManager
-        val transaction = manager.beginTransaction()
-        transaction.replace(R.id.answerFragment, quiz.fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        textQuestion.text = question.label
+        val questionView = question.buildAnswersWidgets(applicationContext)
+
+        findViewById<LinearLayout>(R.id.answerLayout).removeAllViews()
+        findViewById<LinearLayout>(R.id.answerLayout).addView(questionView)
+
     }
 
     fun handleAnswer(view: View) {
-        val quiz = quizzes.get(currentQuizIndex)
+        val quiz = questions.get(currentQuizIndex)
         currentQuizIndex++
 
-        if (currentQuizIndex >= quizzes.size) {
+        if (currentQuizIndex >= questions.size) {
             val intent = Intent(this, AnswerActivity::class.java)
             startActivity(intent)
         }
         else {
-            showQuestion(quizzes[currentQuizIndex])
+            showQuestion(questions[currentQuizIndex])
             updateNumberQuestion()
         }
     }

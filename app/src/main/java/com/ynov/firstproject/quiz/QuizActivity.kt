@@ -8,10 +8,8 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.ynov.firstproject.R
-import com.ynov.firstproject.quiz.model.question.RadioQuestion
 import com.ynov.firstproject.quiz.model.answer.Answer
-import com.ynov.firstproject.quiz.model.question.CheckBoxQuestion
-import com.ynov.firstproject.quiz.model.question.Question
+import com.ynov.firstproject.quiz.model.question.*
 
 class QuizActivity : AppCompatActivity() {
 
@@ -29,7 +27,7 @@ class QuizActivity : AppCompatActivity() {
     private fun createQuiz() {
 
         questions.add(
-            RadioQuestion(getString(R.string.question_profession), listOf (
+            CheckBoxQuestion(getString(R.string.question_profession), listOf (
                 Answer(1, getString(R.string.answer_lawyer)),
                 Answer(10, getString(R.string.answer_movie_star)),
                 Answer(7, getString(R.string.answer_teacher)),
@@ -38,18 +36,26 @@ class QuizActivity : AppCompatActivity() {
                 Answer(7, getString(R.string.answer_landscaper)),
                 Answer(7, getString(R.string.answer_craftsman)),
                 Answer(10, getString(R.string.answer_butcher))
-            ))
+            ),2)
         )
 
         questions.add(
-            CheckBoxQuestion(getString(R.string.question_boggart),
+            SpinnerQuestion(getString(R.string.question_boggart),
                     listOf (
                         Answer(1, getString(R.string.answer_snake)),
                         Answer(4, getString(R.string.answer_clown)),
                         Answer(7, getString(R.string.answer_spider)),
                         Answer(10, getString(R.string.answer_dementor))
                     )
-            , 2) 
+            )
+        )
+
+        questions.add(
+            SliderQuestion("Do you like Hermione Granger ?",
+                listOf (
+                    Answer(10, "No"),
+                    Answer(5, "Yes"),
+                        ))
         )
 
         val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)
@@ -66,7 +72,6 @@ class QuizActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.answerLayout).removeAllViews()
         findViewById<LinearLayout>(R.id.answerLayout).addView(questionView)
-
     }
 
     fun handleAnswer(view: View) {

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.*
 import com.ynov.firstproject.quiz.model.answer.Answer
 
-class CheckBoxQuestion(label : String, answers : List<Answer>, val maxAnswerCount: Int) : Question(label, answers) {
+class CheckBoxQuestion(label : String, answers : List<Answer>, private val maxAnswerCount: Int) : Question(label, answers) {
 
     var answersCount: Int = 0
 
@@ -38,5 +38,10 @@ class CheckBoxQuestion(label : String, answers : List<Answer>, val maxAnswerCoun
         }
 
         return layout
+    }
+
+    override fun resetQuestion() {
+        super.resetQuestion()
+        answersCount = 0
     }
 }

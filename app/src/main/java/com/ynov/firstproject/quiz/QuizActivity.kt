@@ -5,8 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import com.ynov.firstproject.R
@@ -99,22 +99,41 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun handleAnswer(view: View) {
-        val quiz = questions.get(currentQuizIndex)
-        currentQuizIndex++
-
-        if (currentQuizIndex >= questions.size) {
+        // Handle click on next question
+        if (currentQuizIndex == questions.size - 1) {
             val intent = Intent(this, AnswerActivity::class.java)
+            var resultValue = 0
+            questions.forEach { q -> resultValue += q.selectedAnswerValue }
+            intent.putExtra("RESULT", resultValue)
             startActivity(intent)
         }
         else {
-            showQuestion(questions[currentQuizIndex])
+            if (questions[currentQuizIndex].selectedAnswerValue == -1)
+            {
+                Toast.makeText(applicationContext, R.string.answer_mandatory, Toast.LENGTH_SHORT).show()
+            }else {
+                currentQuizIndex++
+                showQuestion(questions[currentQuizIndex])
+                updateNumberQuestion()
+            }
+
+        }
+    }
+
+    fun handlePreviousButton(view: View){
+        if (currentQuizIndex > 0)
+        {
+            currentQuizIndex--
+            val previousQuestion = questions[currentQuizIndex]
+            previousQuestion.resetQuestion()
+            showQuestion(previousQuestion)
             updateNumberQuestion()
         }
     }
 
     private fun updateNumberQuestion() {
         val currentQuestion = findViewById<TextView>(R.id.currentQuestion)
-        currentQuestion.text = (currentQuizIndex+1).toString()
+        currentQuestion.text = (currentQuizIndex + 1).toString()
 
     }
 }

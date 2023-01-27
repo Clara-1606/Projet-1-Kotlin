@@ -35,7 +35,7 @@ class ImageQuestion(label : String, private val answersMap : Map<Int,Answer>) : 
         return layout
     }
 
-    fun clearImageBackgrounds(layout: GridLayout){
+    private fun clearImageBackgrounds(layout: GridLayout){
         val childCount: Int = layout.childCount
         for (i in 0 until childCount) {
             val v: ImageView = layout.getChildAt(i) as ImageView

@@ -9,4 +9,7 @@ abstract class Question(var label : String, var answers : List<Answer>) {
     var selectedAnswerValue = -1
 
     abstract fun buildAnswersWidgets(context: Context) : View
+    open fun resetQuestion(){
+        selectedAnswerValue = -1
+    }
 }

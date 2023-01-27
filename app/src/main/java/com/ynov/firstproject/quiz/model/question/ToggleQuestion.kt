@@ -22,7 +22,14 @@ class ToggleQuestion(label : String, answers : List<Answer>) : Question(label, a
         layout.addView(switch)
         layout.addView(rightText)
 
+        switch.setOnCheckedChangeListener { buttonView, isChecked ->
+            selectedAnswerValue = if (isChecked) {
+                answers[0].value
+            } else {
+                answers[1].value
+            }
+        }
+
         return layout
-        //TODO : Clean with key value pair input or two different variables
     }
 }

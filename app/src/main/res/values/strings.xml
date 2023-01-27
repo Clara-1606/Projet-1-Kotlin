@@ -28,7 +28,40 @@
     <string name="answer_clown">Clown</string>
     <string name="answer_spider">Spider</string>
     <string name="answer_dementor">Dementor</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_hermione">Do you like Hermione Granger ?</string>
+    <string name="answer_yes">Yes</string>
+    <string name="answer_no">No</string>
+    <string name="question_creature">Which creature is your favorite ?</string>
+    <string name="answer_hippogriffe">Hippogriffe</string>
+    <string name="question_phoenix">Phoenix</string>
+    <string name="question_niffleur">Niffleur</string>
+    <string name="question_basilic">Basilic</string>
+    <string name="question_flaw">What is your worst flaw?</string>
+    <string name="answer_selfish">Selfish</string>
+    <string name="answer_fearful">Fearful</string>
+    <string name="answer_arrogant">Arrogant</string>
+    <string name="answer_unstable">Unstable</string>
+    <string name="question_wizard">Which wizard do you prefer ?</string>
+    <string name="answer_dumbledore">Dumbledore</string>
+    <string name="answer_mc_gonagall">McGonagall</string>
+    <string name="answer_hadrig">Hagrid</string>
+    <string name="answer_sirius_black">Sirius Black</string>
+    <string name="answer_harry_potter">Harry Potter</string>
+    <string name="answer_fred_weasley">Fred Weasley</string>
+    <string name="answer_george_weasley">George Weasley</string>
+    <string name="answer_ron_weasley">Ron Weasley</string>
+    <string name="answer_hermione_granger">Hermione Granger</string>
+    <string name="answer_neville">Neville</string>
+    <string name="answer_severus_rogue">Severus Rogue</string>
+    <string name="answer_tom_jedusor">Tom Jedusor</string>
+    <string name="answer_voldemort">Voldemort</string>
+    <string name="answer_draco_malefoy">Draco Malefoy</string>
+    <string name="answer_cadwallader">Cadwallader</string>
+    <string name="answer_luna_lovegood">Luna Lovegood</string>
+    <string name="answer_cho_chang">Cho Chang</string>
+    <string name="answer_filius_flitwick">"Filius Flitwick "</string>
+    <string name="answer_sibyl_trelawney">Sibyl Trelawney</string>
+    <string name="text_toast_error">2 answers max</string>
+
 
 </resources>

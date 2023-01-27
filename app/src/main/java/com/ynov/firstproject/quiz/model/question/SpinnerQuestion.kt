@@ -2,12 +2,12 @@ package com.ynov.firstproject.quiz.model.question
 
 import android.R
 import android.content.Context
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.ynov.firstproject.quiz.model.answer.Answer
 
 
@@ -28,6 +28,9 @@ class SpinnerQuestion(label : String, answers : List<Answer>) : Question(label, 
         ad.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
 
         spinner.adapter = ad
+
+        val layoutParams = ConstraintLayout.LayoutParams(700, ConstraintLayout.LayoutParams.WRAP_CONTENT)
+        spinner.layoutParams = layoutParams
 
         // Set selected value
 

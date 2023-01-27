@@ -114,7 +114,7 @@ class QuizActivity : AppCompatActivity() {
         else {
             if (questions[currentQuizIndex].selectedAnswerValue == -1)
             {
-                Toast.makeText(applicationContext, "Please select an answer", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, R.string.answer_mandatory, Toast.LENGTH_SHORT).show()
             }else {
                 currentQuizIndex++
                 showQuestion(questions[currentQuizIndex])

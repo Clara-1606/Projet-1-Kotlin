@@ -29,4 +29,5 @@
     <string name="answer_clown">Clown</string>
     <string name="answer_spider">Araignée</string>
     <string name="answer_dementor">Détraqueur</string>
+    <string name="answer_mandatory">Veuillez saisir une réponse</string>
 </resources>

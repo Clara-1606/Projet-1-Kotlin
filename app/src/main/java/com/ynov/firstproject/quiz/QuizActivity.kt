@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import com.ynov.firstproject.R
@@ -100,19 +101,26 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun handleAnswer(view: View) {
-        currentQuizIndex++
+        // Handle click on next question
 
-        if (currentQuizIndex >= questions.size) {
+
+        if (currentQuizIndex == questions.size - 1) {
             val intent = Intent(this, AnswerActivity::class.java)
             var resultValue = 0
             questions.forEach { q -> resultValue += q.selectedAnswerValue }
-            Log.i("Test", resultValue.toString())
             intent.putExtra("RESULT", resultValue)
             startActivity(intent)
         }
         else {
-            showQuestion(questions[currentQuizIndex])
-            updateNumberQuestion()
+            if (questions[currentQuizIndex].selectedAnswerValue == -1)
+            {
+                Toast.makeText(applicationContext, "Please select an answer", Toast.LENGTH_SHORT).show()
+            }else {
+                currentQuizIndex++
+                showQuestion(questions[currentQuizIndex])
+                updateNumberQuestion()
+            }
+
         }
     }
 

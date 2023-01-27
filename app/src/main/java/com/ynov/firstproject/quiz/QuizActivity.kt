@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -99,11 +100,14 @@ class QuizActivity : AppCompatActivity() {
     }
 
     fun handleAnswer(view: View) {
-        val quiz = questions.get(currentQuizIndex)
         currentQuizIndex++
 
         if (currentQuizIndex >= questions.size) {
             val intent = Intent(this, AnswerActivity::class.java)
+            var resultValue = 0
+            questions.forEach { q -> resultValue += q.selectedAnswerValue }
+            Log.i("Test", resultValue.toString())
+            intent.putExtra("RESULT", resultValue)
             startActivity(intent)
         }
         else {

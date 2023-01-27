@@ -64,4 +64,7 @@
     <string name="answer_voldemort">Voldemort</string>
     <string name="text_toast_error">2 réponses max</string>
     <string name="answer_mandatory">Veuillez saisir une réponse</string>
+    <string name="name_placeholder">Votre prénom</string>
+    <string name="personal_infos_label">Information personnelle</string>
+    <string name="start_quizz">Commencer</string>
 </resources>

@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.ynov.firstproject.quiz.PersonalInformationActivity
 import com.ynov.firstproject.quiz.QuizActivity
 
 class MainActivity : AppCompatActivity() {
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun playQuiz (view: View) {
-        val intent = Intent(this, QuizActivity::class.java)
+        val intent = Intent(this, PersonalInformationActivity::class.java)
         startActivity(intent)
     }
 }

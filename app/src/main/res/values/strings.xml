@@ -63,6 +63,8 @@
     <string name="answer_sibyl_trelawney">Sibyl Trelawney</string>
     <string name="text_toast_error">2 answers max</string>
     <string name="answer_mandatory">Please input an answer</string>
-
+    <string name="name_placeholder">Your name</string>
+    <string name="personal_infos_label">Personnal informations</string>
+    <string name="start_quizz">Start quizz</string>
 
 </resources>

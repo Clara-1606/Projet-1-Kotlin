@@ -124,7 +124,9 @@ class QuizActivity : AppCompatActivity() {
         if (currentQuizIndex > 0)
         {
             currentQuizIndex--
-            showQuestion(questions[currentQuizIndex])
+            val previousQuestion = questions[currentQuizIndex]
+            previousQuestion.resetQuestion()
+            showQuestion(previousQuestion)
             updateNumberQuestion()
         }
     }

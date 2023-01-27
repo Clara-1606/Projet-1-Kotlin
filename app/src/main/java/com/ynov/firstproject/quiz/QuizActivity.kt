@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import com.ynov.firstproject.MainActivity
 import com.ynov.firstproject.R
 import com.ynov.firstproject.quiz.model.answer.Answer
 import com.ynov.firstproject.quiz.model.question.*
@@ -20,6 +21,7 @@ class QuizActivity : AppCompatActivity() {
     private var questions = ArrayList<Question>()
     var currentQuizIndex : Int = 0
     var totalPoint : Int = 0
+    var name : String = "Clara"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,10 +79,10 @@ class QuizActivity : AppCompatActivity() {
         questions.add(
             RadioQuestion(getString(R.string.question_flaw),
                 listOf (
-                    Answer(1, getString(R.string.answer_selfish)),
+                    Answer(7, getString(R.string.answer_selfish)),
                     Answer(4, getString(R.string.answer_fearful)),
-                    Answer(7, getString(R.string.answer_arrogant)),
-                    Answer(10, getString(R.string.answer_unstable))
+                    Answer(10, getString(R.string.answer_arrogant)),
+                    Answer(1, getString(R.string.answer_unstable))
                 )
             )
         )
@@ -147,6 +149,7 @@ class QuizActivity : AppCompatActivity() {
             var resultValue = 0
             questions.forEach { q -> resultValue += q.selectedAnswerValue }
             intent.putExtra("RESULT", resultValue)
+            intent.putExtra("NAME", name)
             startActivity(intent)
         }
         else {
@@ -170,6 +173,10 @@ class QuizActivity : AppCompatActivity() {
             previousQuestion.resetQuestion()
             showQuestion(previousQuestion)
             updateNumberQuestion()
+        }
+        else {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 

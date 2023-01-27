@@ -63,6 +63,18 @@
     <string name="answer_sibyl_trelawney">Sibyl Trelawney</string>
     <string name="text_toast_error">2 answers max</string>
     <string name="answer_mandatory">Please input an answer</string>
+    <string name="text_button_comment">Add</string>
+    <string name="text_comment">Comment :</string>
+    <string name="edit_text_comment">Your comment</string>
+    <string name="griffondor">Gryffindor</string>
+    <string name="serdaigle">RavenClaw</string>
+    <string name="poufsouffle">Hufflepuff</string>
+    <string name="serpentard">Slytherin</string>
+    <string name="moldu">Moldu</string>
+    <string name="text_win">Congratulations</string>
+    <string name="text_be">you are</string>
+    <string name="text_toast_error_comment">You have already sent a comment</string>
+    <string name="text_toast_ok">Comment sent !</string>
 
 
 </resources>

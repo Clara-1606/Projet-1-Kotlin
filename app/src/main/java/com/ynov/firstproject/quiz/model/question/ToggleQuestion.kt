@@ -35,6 +35,7 @@ class ToggleQuestion(label : String, answers : List<Answer>, private val image: 
         val switch = Switch(context)
         switch.id = View.generateViewId()
         constraintLayout.addView(switch)
+        selectedAnswerValue = answers[0].value
 
 // Added constraints to place the switch below the image
         val switchConstraints = ConstraintSet()

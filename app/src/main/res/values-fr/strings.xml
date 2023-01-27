@@ -64,4 +64,16 @@
     <string name="answer_voldemort">Voldemort</string>
     <string name="text_toast_error">2 réponses max</string>
     <string name="answer_mandatory">Veuillez saisir une réponse</string>
+    <string name="text_button_comment">Ajouter</string>
+    <string name="text_comment">Commentaire :</string>
+    <string name="edit_text_comment">Votre commentaire</string>
+    <string name="text_win">"Féliciations "</string>
+    <string name="text_be">"vous êtes "</string>
+    <string name="griffondor">Griffondor</string>
+    <string name="serdaigle">Serdaigle</string>
+    <string name="poufsouffle">Poufsouffle</string>
+    <string name="serpentard">Serpentard</string>
+    <string name="moldu">Moldu</string>
+    <string name="text_toast_error_comment">Vous avez déjà envoyé un commentaire</string>
+    <string name="text_toast_ok">Commentaire envoyé !</string>
 </resources>

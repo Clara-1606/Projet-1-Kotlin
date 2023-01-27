@@ -12,6 +12,8 @@ import androidx.constraintlayout.widget.ConstraintSet
 import com.ynov.firstproject.R
 import com.ynov.firstproject.quiz.model.answer.Answer
 import com.ynov.firstproject.quiz.model.question.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class QuizActivity : AppCompatActivity() {
 
@@ -53,23 +55,63 @@ class QuizActivity : AppCompatActivity() {
         )
 
         questions.add(
-            AutoCompleteQuestion("Do you like Hermione Granger ?",
+            ToggleQuestion(getString(R.string.question_hermione),
                 listOf (
-                    Answer(10, "No"),
-                    Answer(5, "Yes"),
-                        ))
+                    Answer(10, getString(R.string.answer_no)),
+                    Answer(5, getString(R.string.answer_yes)),
+                        ),
+                R.drawable.hermione)
         )
 
         questions.add(
-            ImageQuestion("Which creature is your favorite ? ",
+            ImageQuestion(getString(R.string.question_creature),
                     mapOf(
-                        Pair(R.drawable.ic_android_black_24dp, Answer(4, "Hippogriffe")),
-                        Pair(R.drawable.baseline_10k_24, Answer(1, "Phoenix")),
-                        Pair(R.drawable.baseline_3d_rotation_24, Answer(7, "Niffleur")),
-                        Pair(R.drawable.baseline_4g_mobiledata_24, Answer(10, "Basilic"))
+                        Pair(R.drawable.hipogriffe, Answer(4, getString(R.string.answer_hippogriffe))),
+                        Pair(R.drawable.phoenix, Answer(1, getString(R.string.question_phoenix))),
+                        Pair(R.drawable.niffleur, Answer(7, getString(R.string.question_niffleur))),
+                        Pair(R.drawable.basilic, Answer(10, getString(R.string.question_basilic)))
                     )
                 )
         )
+
+        questions.add(
+            RadioQuestion(getString(R.string.question_flaw),
+                listOf (
+                    Answer(1, getString(R.string.answer_selfish)),
+                    Answer(4, getString(R.string.answer_fearful)),
+                    Answer(7, getString(R.string.answer_arrogant)),
+                    Answer(10, getString(R.string.answer_unstable))
+                )
+            )
+        )
+
+        questions.add(
+            AutoCompleteQuestion(getString(R.string.question_wizard),
+                listOf (
+                    Answer(0, getString(R.string.answer_dumbledore)),
+                    Answer(0, getString(R.string.answer_mc_gonagall)),
+                    Answer(0, getString(R.string.answer_hadrig)),
+                    Answer(0, getString(R.string.answer_sirius_black)),
+                    Answer(0, getString(R.string.answer_harry_potter)),
+                    Answer(0, getString(R.string.answer_fred_weasley)),
+                    Answer(0, getString(R.string.answer_george_weasley)),
+                    Answer(0, getString(R.string.answer_ron_weasley)),
+                    Answer(0, getString(R.string.answer_hermione_granger)),
+                    Answer(0, getString(R.string.answer_neville)),
+                    Answer(0, getString(R.string.answer_severus_rogue)),
+                    Answer(0, getString(R.string.answer_tom_jedusor)),
+                    Answer(0, getString(R.string.answer_voldemort)),
+                    Answer(0, getString(R.string.answer_draco_malefoy)),
+                    Answer(0, getString(R.string.answer_cadwallader)),
+                    Answer(0, getString(R.string.answer_luna_lovegood)),
+                    Answer(0, getString(R.string.answer_cho_chang)),
+                    Answer(0, getString(R.string.answer_filius_flitwick)),
+                    Answer(0, getString(R.string.answer_sibyl_trelawney))
+                )
+            )
+        )
+
+        questions.shuffle();
 
         val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)
         currentQuestion.text = questions.size.toString()

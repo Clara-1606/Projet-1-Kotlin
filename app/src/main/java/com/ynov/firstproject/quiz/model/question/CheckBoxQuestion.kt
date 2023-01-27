@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.ynov.firstproject.R
 import com.ynov.firstproject.quiz.model.answer.Answer
 
 class CheckBoxQuestion(label : String, answers : List<Answer>, private val maxAnswerCount: Int) : Question(label, answers) {
@@ -26,6 +27,7 @@ class CheckBoxQuestion(label : String, answers : List<Answer>, private val maxAn
                         selectedAnswerValue += selectedAnswer!!.value
                     } else {
                         buttonView.isChecked = false
+                        Toast.makeText(context, R.string.text_toast_error, Toast.LENGTH_LONG).show()
                     }
                 }
                 else if (maxAnswerCount > 0) {

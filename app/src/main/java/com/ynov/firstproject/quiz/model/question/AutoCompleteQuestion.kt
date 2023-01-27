@@ -25,6 +25,11 @@ class AutoCompleteQuestion(label : String, answers : List<Answer>) : Question(la
 
         ad.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
 
+        autoComplete.width = 700
+//        val layoutParams = autoComplete.layoutParams
+//        layoutParams.width = 400
+//        autoComplete.layoutParams = layoutParams
+
         autoComplete.isFocusableInTouchMode = true
         autoComplete.doAfterTextChanged {  action ->
             if (action.toString().isNotBlank() && action.toString().isNotEmpty()){

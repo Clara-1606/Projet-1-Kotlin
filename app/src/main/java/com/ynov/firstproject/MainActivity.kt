@@ -1,17 +1,20 @@
 package com.ynov.firstproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.ynov.firstproject.quiz.QuizActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Bouton qui affiche une info toast
+        // Button that displays toast info
         val buttonToast = findViewById<Button>(R.id.mainButton)
         buttonToast.setOnClickListener {
             Toast.makeText(this, R.string.text_toast, Toast.LENGTH_LONG).show()
@@ -57,5 +60,10 @@ class MainActivity : AppCompatActivity() {
     override fun isFinishing(): Boolean {
         Log.i(MainActivity::class.simpleName, getString(R.string.text_is_finishing))
         return super.isFinishing()
+    }
+
+    fun playQuiz (view: View) {
+        val intent = Intent(this, QuizActivity::class.java)
+        startActivity(intent)
     }
 }

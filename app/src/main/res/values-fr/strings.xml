@@ -13,5 +13,20 @@
     <string name="text_hello"> Bonjour Kotlin ! </string>
     <string name="text_question"> Comment allez-vous ? </string>
     <string name="text_toast">Il ne fallait pas cliquer :O !</string>
-    <string name="text_button">Ne cliquez pas</string>
+    <string name="text_button_toast">Ne cliquez pas</string>
+    <string name="text_button_quiz">Quiz</string>
+    <string name="question_profession">Quelles professions vous plaisent le plus (2 réponses Maximum)</string>
+    <string name="answer_lawyer">Avocat</string>
+    <string name="answer_movie_star">Star de cinéma</string>
+    <string name="answer_teacher">Professeur des écoles</string>
+    <string name="answer_author_novels">Auteur de romans</string>
+    <string name="answer_company_manager">Chef d\'entreprise</string>
+    <string name="answer_landscaper">Paysagiste</string>
+    <string name="answer_craftsman">Artisan</string>
+    <string name="answer_butcher">Boucher</string>
+    <string name="question_boggart">En quoi se transforme un épouvantard face à toi ?</string>
+    <string name="answer_snake">Serpent</string>
+    <string name="answer_clown">Clown</string>
+    <string name="answer_spider">Araignée</string>
+    <string name="answer_dementor">Détraqueur</string>
 </resources>

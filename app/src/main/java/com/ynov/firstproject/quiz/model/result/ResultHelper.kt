@@ -11,6 +11,7 @@ class ResultHelper {
             in 57..70 -> return "Serpentard"
             in 27..41 -> return "Poufsouffle"
             in 42..56 -> return "Serdaigle"
+            else -> return "Homeless"
         }
     }
 }

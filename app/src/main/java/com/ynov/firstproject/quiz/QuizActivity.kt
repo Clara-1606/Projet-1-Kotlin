@@ -4,9 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -102,8 +100,6 @@ class QuizActivity : AppCompatActivity() {
 
     fun handleAnswer(view: View) {
         // Handle click on next question
-
-
         if (currentQuizIndex == questions.size - 1) {
             val intent = Intent(this, AnswerActivity::class.java)
             var resultValue = 0
@@ -124,9 +120,18 @@ class QuizActivity : AppCompatActivity() {
         }
     }
 
+    fun handlePreviousButton(view: View){
+        if (currentQuizIndex > 0)
+        {
+            currentQuizIndex--
+            showQuestion(questions[currentQuizIndex])
+            updateNumberQuestion()
+        }
+    }
+
     private fun updateNumberQuestion() {
         val currentQuestion = findViewById<TextView>(R.id.currentQuestion)
-        currentQuestion.text = (currentQuizIndex+1).toString()
+        currentQuestion.text = (currentQuizIndex + 1).toString()
 
     }
 }

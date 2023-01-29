@@ -1,4 +1,4 @@
-# Projet 1 Kotlin of CVBB 
+# Project 1 Kotlin of CVBB 
 
 ## Team presentation 
 - Bastien BRUNET M1 Développement Logiciel, Mobile et IOT
@@ -36,6 +36,12 @@ We are using the differents widgets available for android to build a complete fo
 Each answer is worth a certain amnount of points, that's how we can determine which is yours !
 
 ### Showtime
+Here is a simple demonstration of how the app is designed to be used, starting from the home screen to the end result :
 
+<img src="./readme_images/Screenshot_2023-01-29-18-10-47-900_com.ynov.firstproject.jpg" alt="drawing" width="200"/>
 
+<img src="./readme_images/Screenshot_2023-01-29-18-10-54-722_com.ynov.firstproject.jpg" alt="drawing" width="200"/>
 
+<img src="./readme_images/Screenshot_2023-01-29-18-11-07-277_com.ynov.firstproject.jpg" alt="drawing" width="200"/>
+
+<img src="./readme_images/Screenshot_2023-01-29-18-12-10-893_com.ynov.firstproject.jpg" alt="drawing" width="200"/>

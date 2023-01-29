@@ -1,41 +1,41 @@
-# Projet 1 Kotlin de CVBB 
+# Projet 1 Kotlin of CVBB 
 
-## Présentation de l'équipe 
+## Team presentation 
 - Bastien BRUNET M1 Développement Logiciel, Mobile et IOT
 - Clara VESVAL M1 Développement Logiciel, Mobile et IOT
 
-Nous nous connaissons depuis le 3ème année et nous avons l'habitude de travailler ensemble.
-Nous sommes complémentaires.
+We know each other since the start of third year and are used to work together.
+We are complementary.
 
-## Présentation du projet 
-Pour notre premier projet d'année de Master en Développement Mobile de niveau 2, nous faisons de développement Android Natif avec Kotlin.
-Nous devons donc mettre en place les bonnes pratiques d'un projet Kotlin.
+## Project presentation
+For the first level 2 mobile development project of this year, we are coding a native android app with Kotlin.
+We have to foolow the good practices of an android and kotlin project.
 - [X] Customize color in App bar 
 - [X] Change the launcher icon 
 - [X] Add a language 
 - [X] Use of string.xml (/!\ hard coded var /!) 
 - [X] Coherence in naming convention
 
-### Outils 
-Nous sommes sur Android Studio Electrical Eel (Attention si vous n'êtes pas sur cette version, il peut avoir des problèmes de compatibilité)
-On compile en Android 33, et notre cible est pour Android 33
+### Tools 
+We are using Android Studio Electrical Eel (Be careful if you're not using this version, there could be some compatibility issues)
+We are compiling in Android 33, our target is Android 33
 
 
 ### Architecture 
-Nous avons une page d'accueil et une page pour accéder à notre super questionnaire pour découvrir quelle maison Pourdlard vous êtes !
-Vous allez répondre à un certain nombre de questions puis vous pourrez découvre si vous êtes ~~Serpentard~~ Griffondor :)
+We have a home page as well as a page to gain access to our awesome quiz that will reveal which Hogwart house you belong to !
+During this quiz, you will answer to a number of questions in order to discover if you are a ~~Slytherin~~ or a Gryffindor :)
 
-Notre questionnaire utilise différents widgets disponibles sur Kotlin pour réaliser un formulaire complet 
+We are using the differents widgets available for android to build a complete form :
 - RadioButton
 - EditText
 - Image
 - CheckBox
-- Slider
-- Toggle
+- Switch
 - Spinner
 
-Chaque réponse correspond à un nombre de points, et grâce à cela on calcul quelle maison est faites pour vous !
+Each answer is worth a certain amnount of points, that's how we can determine which is yours !
+
+### Showtime
 
 
-### Démonstration 
 

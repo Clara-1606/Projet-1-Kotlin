@@ -22,7 +22,7 @@ class QuizActivity : AppCompatActivity() {
     private var questions = ArrayList<Question>()
     var currentQuizIndex : Int = 0
     var totalPoint : Int = 0
-    var name : String = "Clara"
+    var name : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,6 @@ class QuizActivity : AppCompatActivity() {
         createQuiz()
     }
 
-    @SuppressLint("SetTextI18n")
     private fun createQuiz() {
 
         questions.add(
@@ -115,6 +114,7 @@ class QuizActivity : AppCompatActivity() {
             )
         )
 
+        // Randomize questions
         questions.shuffle();
 
         val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)

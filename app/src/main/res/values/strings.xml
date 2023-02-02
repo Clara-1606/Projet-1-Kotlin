@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FirstProject</string>
+    <string name="app_name">Leviosa</string>
     <string name="text_on_create">onCreate() method called</string>
     <string name="text_on_start">onStart() method called</string>
     <string name="text_on_resume">onResume() method called</string>

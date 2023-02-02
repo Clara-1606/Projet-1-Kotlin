@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Premier Projet</string>
+    <string name="app_name">Leviosa</string>
     <string name="text_on_create">Méthode onCreate() appelée</string>
     <string name="text_on_start">Méthode onStart() appelée</string>
     <string name="text_on_resume">Méthode onResume() appelée</string>

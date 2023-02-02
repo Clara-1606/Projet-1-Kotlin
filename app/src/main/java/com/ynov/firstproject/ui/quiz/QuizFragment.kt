@@ -1,37 +1,58 @@
-package com.ynov.firstproject.quiz
+package com.ynov.firstproject.ui.quiz
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
-import com.ynov.firstproject.MainActivity
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import com.ynov.firstproject.R
+import com.ynov.firstproject.databinding.FragmentQuizBinding
 import com.ynov.firstproject.quiz.model.answer.Answer
 import com.ynov.firstproject.quiz.model.question.*
-import java.util.*
-import kotlin.collections.ArrayList
 
-class QuizActivity : AppCompatActivity() {
+class QuizFragment : Fragment() {
 
     private var questions = ArrayList<Question>()
     var currentQuizIndex : Int = 0
     var totalPoint : Int = 0
-    var name : String = "Clara"
+    var name : String? = ""
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz)
-        name = intent.getStringExtra("NAME") as String
+    private var _binding: FragmentQuizBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    private lateinit var viewModel: QuizViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        val quizViewModel =
+            ViewModelProvider(this).get(QuizViewModel::class.java)
+
+        _binding = FragmentQuizBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        // Bind buttons
+        binding.buttonValidate.setOnClickListener { handleAnswer() }
+        binding.buttonBack.setOnClickListener { handlePreviousButton() }
+
+        // Get name from bundle
+        name = arguments?.getString("NAME").toString()
         createQuiz()
+
+        return root
     }
 
-    @SuppressLint("SetTextI18n")
     private fun createQuiz() {
 
         questions.add(
@@ -49,12 +70,12 @@ class QuizActivity : AppCompatActivity() {
 
         questions.add(
             SpinnerQuestion(getString(R.string.question_boggart),
-                    listOf (
-                        Answer(1, getString(R.string.answer_snake)),
-                        Answer(4, getString(R.string.answer_clown)),
-                        Answer(7, getString(R.string.answer_spider)),
-                        Answer(10, getString(R.string.answer_dementor))
-                    )
+                listOf (
+                    Answer(1, getString(R.string.answer_snake)),
+                    Answer(4, getString(R.string.answer_clown)),
+                    Answer(7, getString(R.string.answer_spider)),
+                    Answer(10, getString(R.string.answer_dementor))
+                )
             )
         )
 
@@ -63,19 +84,19 @@ class QuizActivity : AppCompatActivity() {
                 listOf (
                     Answer(10, getString(R.string.answer_no)),
                     Answer(5, getString(R.string.answer_yes)),
-                        ),
+                ),
                 R.drawable.hermione)
         )
 
         questions.add(
             ImageQuestion(getString(R.string.question_creature),
-                    mapOf(
-                        Pair(R.drawable.hipogriffe, Answer(4, getString(R.string.answer_hippogriffe))),
-                        Pair(R.drawable.phoenix, Answer(1, getString(R.string.question_phoenix))),
-                        Pair(R.drawable.niffleur, Answer(7, getString(R.string.question_niffleur))),
-                        Pair(R.drawable.basilic, Answer(10, getString(R.string.question_basilic)))
-                    )
+                mapOf(
+                    Pair(R.drawable.hipogriffe, Answer(4, getString(R.string.answer_hippogriffe))),
+                    Pair(R.drawable.phoenix, Answer(1, getString(R.string.question_phoenix))),
+                    Pair(R.drawable.niffleur, Answer(7, getString(R.string.question_niffleur))),
+                    Pair(R.drawable.basilic, Answer(10, getString(R.string.question_basilic)))
                 )
+            )
         )
 
         questions.add(
@@ -117,7 +138,7 @@ class QuizActivity : AppCompatActivity() {
 
         questions.shuffle();
 
-        val currentQuestion = findViewById<TextView>(R.id.lastQuestionNumber)
+        val currentQuestion = binding.lastQuestionNumber
         currentQuestion.text = questions.size.toString()
         updateNumberQuestion()
 
@@ -125,10 +146,10 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private fun showQuestion(question : Question) {
-        val textQuestion = findViewById<TextView>(R.id.questionContent)
+        val textQuestion = binding.questionContent
         textQuestion.text = question.label
-        val questionView = question.buildAnswersWidgets(applicationContext)
-        val constraintLayout =  findViewById<ConstraintLayout>(R.id.answerLayout)
+        val questionView = question.buildAnswersWidgets(requireContext())
+        val constraintLayout =  binding.answerLayout
 
         constraintLayout.removeAllViews()
         questionView.id = View.generateViewId()
@@ -144,20 +165,21 @@ class QuizActivity : AppCompatActivity() {
         constraintSet.applyTo(constraintLayout)
     }
 
-    fun handleAnswer(view: View) {
+    fun handleAnswer() {
         // Handle click on next question
         if (currentQuizIndex == questions.size - 1) {
-            val intent = Intent(this, AnswerActivity::class.java)
+            // Go to result fragment
             var resultValue = 0
             questions.forEach { q -> resultValue += q.selectedAnswerValue }
-            intent.putExtra("RESULT", resultValue)
-            intent.putExtra("NAME", name)
-            startActivity(intent)
+            val bundle = bundleOf()
+            bundle.putString("NAME", name)
+            bundle.putInt("RESULT", resultValue)
+            findNavController().navigate(R.id.action_nav_quiz_to_nav_result, bundle)
         }
         else {
             if (questions[currentQuizIndex].selectedAnswerValue == -1)
             {
-                Toast.makeText(applicationContext, R.string.answer_mandatory, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), R.string.answer_mandatory, Toast.LENGTH_SHORT).show()
             }else {
                 currentQuizIndex++
                 showQuestion(questions[currentQuizIndex])
@@ -167,7 +189,7 @@ class QuizActivity : AppCompatActivity() {
         }
     }
 
-    fun handlePreviousButton(view: View){
+    fun handlePreviousButton(){
         if (currentQuizIndex > 0)
         {
             currentQuizIndex--
@@ -177,15 +199,21 @@ class QuizActivity : AppCompatActivity() {
             updateNumberQuestion()
         }
         else {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            // Go back to personal infos fragment
+            val bundle = bundleOf("NAME" to name)
+            findNavController().navigate(R.id.action_nav_quiz_to_nav_gallery, bundle)
         }
     }
 
     private fun updateNumberQuestion() {
-        val currentQuestion = findViewById<TextView>(R.id.currentQuestion)
+        val currentQuestion = binding.currentQuestion
         currentQuestion.text = (currentQuizIndex + 1).toString()
 
     }
-}
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+}

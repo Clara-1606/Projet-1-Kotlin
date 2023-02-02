@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import com.ynov.firstproject.MainActivity
 import com.ynov.firstproject.R
 import com.ynov.firstproject.quiz.model.answer.Answer
 

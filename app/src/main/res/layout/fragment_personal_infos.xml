@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.PersonalInformationActivity">
+    tools:context=".LauncherActivity">
 
     <TextView
         android:id="@+id/infoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/personal_infos_label"
+        android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/inputName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +34,6 @@
         android:id="@+id/startQuestionsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startQuizz"
         android:text="@string/start_quizz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

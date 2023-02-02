@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.ynov.firstproject.R
-import com.ynov.firstproject.databinding.FragmentGalleryBinding
 import com.ynov.firstproject.databinding.FragmentResultBinding
 import com.ynov.firstproject.quiz.result.ResultHelper
-import com.ynov.firstproject.ui.personalinfos.PersonnalInfosViewModel
 
 class ResultFragment : Fragment() {
 

@@ -5,7 +5,7 @@
     android:id="@+id/mainQuestionlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.QuizActivity">
+    tools:context=".LauncherActivity">
 
     <TextView
         android:id="@+id/currentQuestion"

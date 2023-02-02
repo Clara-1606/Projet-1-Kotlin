@@ -7,20 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
-import com.ynov.firstproject.MainActivity
 import com.ynov.firstproject.R
-import com.ynov.firstproject.databinding.FragmentGalleryBinding
 import com.ynov.firstproject.databinding.FragmentQuizBinding
-import com.ynov.firstproject.quiz.AnswerActivity
 import com.ynov.firstproject.quiz.model.answer.Answer
 import com.ynov.firstproject.quiz.model.question.*
-import com.ynov.firstproject.ui.personalinfos.PersonnalInfosViewModel
 
 class QuizFragment : Fragment() {
 

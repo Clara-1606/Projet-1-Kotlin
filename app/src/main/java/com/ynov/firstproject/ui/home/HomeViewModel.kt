@@ -6,7 +6,6 @@ import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.ynov.firstproject.quiz.PersonalInformationActivity
 
 class HomeViewModel : ViewModel() {
 

@@ -5,7 +5,7 @@
     android:id="@+id/mainQuestionlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quiz.QuizActivity">
+    tools:context=".LauncherActivity">
 
     <TextView
         android:id="@+id/currentQuestion"
@@ -48,7 +48,6 @@
         android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="handlePreviousButton"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:src="@android:drawable/ic_menu_revert"
@@ -60,7 +59,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="handleAnswer"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

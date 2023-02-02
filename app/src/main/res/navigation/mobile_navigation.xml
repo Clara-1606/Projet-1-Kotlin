@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ynov.firstproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_personal_info"
+        android:name="com.ynov.firstproject.ui.personalinfos.PersonalInfosFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_personal_infos" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_quiz"
+            app:destination="@id/nav_quiz">
+            <argument
+                android:name="NAME"
+                app:argType="string"
+                android:defaultValue="defaultName" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_quiz"
+        android:name="com.ynov.firstproject.ui.quiz.QuizFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_nav_quiz_to_nav_gallery"
+            app:destination="@id/nav_quiz" />
+        <action
+            android:id="@+id/action_nav_quiz_to_nav_result"
+            app:destination="@id/nav_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_result"
+        android:name="com.ynov.firstproject.ui.result.ResultFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_result" />
+</navigation>

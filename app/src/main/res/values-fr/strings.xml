@@ -79,13 +79,12 @@
     <string name="name_placeholder">Votre prénom</string>
     <string name="personal_infos_label">Information personnelle</string>
     <string name="start_quizz">Commencer</string>
-    <string name="title_activity_launcher">LauncherActivity</string>
     <string name="navigation_drawer_open">Ouvrir menu lateral</string>
     <string name="navigation_drawer_close">Fermer menu lateral</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Pou De Lard</string>
     <string name="nav_header_desc">Bandeau de navigation</string>
     <string name="action_settings">Paramètres</string>
-    <string name="menu_home">Acceuil</string>
+    <string name="menu_home">Accueil</string>
     <string name="menu_quiz">Quiz</string>
+    <string name="menu_wizard">Liste de sorciers</string>
 </resources>

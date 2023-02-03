@@ -86,6 +86,20 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Bandeau de navigation</string>
     <string name="action_settings">Paramètres</string>
+
     <string name="menu_home">Acceuil</string>
     <string name="menu_quiz">Quiz</string>
+    <string name="menu_spells">Sorts</string>
+
+    <string name="spell_accio">Attirer quelque chose</string>
+    <string name="spell_allohomora">Ouvrir une porte verouillée</string>
+    <string name="spell_amplificatum">Grossir un objet</string>
+    <string name="spell_avada_kedavra">Tuer quelqu\'un (sort interdit)</string>
+    <string name="spell_collaporta">Sceller une porte</string>
+    <string name="spell_crac_badaboum">Casser un objet</string>
+    <string name="spell_destructum">Détruire quelque chose</string>
+    <string name="spell_diffinito">Couper quelque chose</string>
+    <string name="spell_dissensium">Ouvrir un passage secret</string>
+    <string name="spell_ectoplasmus">Decoller quelque chose</string>
+    <string name="spell_elasticus">Sauter très haut</string>
 </resources>

@@ -55,7 +55,7 @@
     <string name="answer_neville">Neville</string>
     <string name="answer_severus_rogue">Severus Rogue</string>
     <string name="answer_tom_jedusor">Tom Jedusor</string>
-    <string name="answer_draco_malefoy">Draco Malefoy</string>
+    <string name="answer_draco_malefoy">Drago Malefoy</string>
     <string name="answer_cadwallader">Cadwallader</string>
     <string name="answer_luna_lovegood">Luna Lovegood</string>
     <string name="answer_cho_chang">Cho Chang</string>
@@ -67,8 +67,8 @@
     <string name="text_button_comment">Ajouter</string>
     <string name="text_comment">Commentaire :</string>
     <string name="edit_text_comment">Votre commentaire</string>
-    <string name="text_win">"Féliciations "</string>
-    <string name="text_be">"vous êtes "</string>
+    <string name="text_win">Féliciations </string>
+    <string name="text_be">vous êtes </string>
     <string name="griffondor">Griffondor</string>
     <string name="serdaigle">Serdaigle</string>
     <string name="poufsouffle">Poufsouffle</string>
@@ -94,12 +94,11 @@
         <item>Ron Weasley</item>
         <item>Hermione Granger</item>
         <item>Severus Rogue</item>
-        <item>Dumbledore</item>
-        <item>Voldemort</item>
-        <item>Draco Malefoy</item>
+        <item>Voldemort </item>
+        <item>Drago Malefoy</item>
         <item>McGonagall</item>
     </string-array>
-    <string name="menu_spells">Sorts</string>
+    <string name="menu_spells">Liste de sortilèges</string>
     <string name="spell_accio">Attirer quelque chose</string>
     <string name="spell_allohomora">Ouvrir une porte verouillée</string>
     <string name="spell_amplificatum">Grossir un objet</string>
@@ -111,4 +110,5 @@
     <string name="spell_dissensium">Ouvrir un passage secret</string>
     <string name="spell_ectoplasmus">Decoller quelque chose</string>
     <string name="spell_elasticus">Sauter très haut</string>
+    <string name="text_button_retry"> Recommencer </string>
 </resources>

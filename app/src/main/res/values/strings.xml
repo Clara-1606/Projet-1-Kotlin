@@ -55,7 +55,7 @@
     <string name="answer_severus_rogue">Severus Rogue</string>
     <string name="answer_tom_jedusor">Tom Jedusor</string>
     <string name="answer_voldemort">Voldemort</string>
-    <string name="answer_draco_malefoy">Draco Malefoy</string>
+    <string name="answer_draco_malefoy">Drago Malefoy</string>
     <string name="answer_cadwallader">Cadwallader</string>
     <string name="answer_luna_lovegood">Luna Lovegood</string>
     <string name="answer_cho_chang">Cho Chang</string>
@@ -71,7 +71,7 @@
     <string name="poufsouffle">Hufflepuff</string>
     <string name="serpentard">Slytherin</string>
     <string name="moldu">Moldu</string>
-    <string name="text_win">Congratulations </string>
+    <string name="text_win">Congratulations</string>
     <string name="text_be">you are </string>
     <string name="text_toast_error_comment">You have already sent a comment</string>
     <string name="text_toast_ok">Comment sent !</string>
@@ -85,7 +85,7 @@
     <string name="action_settings">Settings</string>
     <string name="menu_home">Home</string>
     <string name="menu_quiz">Quiz</string>
-    <string name="menu_wizard">Wizard List</string>
+    <string name="menu_wizard">Wizards List</string>
     <string-array name="wizards">
         <item>Dumbledore</item>
         <item>Hagrid</item>
@@ -93,12 +93,11 @@
         <item>Ron Weasley</item>
         <item>Hermione Granger</item>
         <item>Severus Rogue</item>
-        <item>Dumbledore</item>
         <item>Voldemort</item>
-        <item>Draco Malefoy</item>
+        <item>Drago Malefoy</item>
         <item>McGonagall</item>
     </string-array>
-    <string name="menu_spells">Spells</string>
+    <string name="menu_spells">Spells List</string>
     <string name="spell_accio">Bring something to the spell caster</string>
     <string name="spell_allohomora">Open a locked door</string>
     <string name="spell_amplificatum">Make an object bigger</string>
@@ -110,5 +109,5 @@
     <string name="spell_dissensium">Open a secret way</string>
     <string name="spell_ectoplasmus">Take something off</string>
     <string name="spell_elasticus">Jump very high</string>
-
+    <string name="text_button_retry"> Retry </string>
 </resources>

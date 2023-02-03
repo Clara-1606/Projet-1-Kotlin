@@ -1,4 +1,4 @@
-package com.ynov.firstproject.ui.list.spells
+package com.ynov.firstproject.ui.lists.spells
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -18,7 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import com.ynov.firstproject.databinding.FragmentSpellsBinding
-import com.ynov.firstproject.list.model.Spell
+import com.ynov.firstproject.lists.model.Spell
 
 
 class SpellsFragment : Fragment() {

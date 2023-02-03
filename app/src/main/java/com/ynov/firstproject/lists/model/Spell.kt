@@ -1,4 +1,4 @@
-package com.ynov.firstproject.list.model
+package com.ynov.firstproject.lists.model
 
 data class Spell(val name:String, val effect:Int) {
 }

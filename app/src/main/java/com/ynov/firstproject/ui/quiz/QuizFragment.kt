@@ -202,7 +202,7 @@ class QuizFragment : Fragment() {
         else {
             // Go back to personal infos fragment
             val bundle = bundleOf("NAME" to name)
-            findNavController().navigate(R.id.action_nav_quiz_to_nav_gallery, bundle)
+            findNavController().navigate(R.id.action_nav_quiz_to_nav_personal_info, bundle)
         }
     }
 

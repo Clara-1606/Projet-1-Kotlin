@@ -3,8 +3,8 @@
     <color name="pink_200">#FFFE90FE</color>
     <color name="pink_500">#FFE505E5</color>
     <color name="pink_700">#FF9F049F</color>
-    <color name="blue_200">#FF404FFF</color>
-    <color name="blue_700">#FF0112D3</color>
+    <color name="blue_200">#FFDFF0FC</color>
+    <color name="blue_700">#FF414EE7</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

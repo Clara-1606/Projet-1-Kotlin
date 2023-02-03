@@ -37,17 +37,17 @@ class ListWizardFragment : Fragment() {
     private fun seedItems(): MutableList<Wizard> {
         val wizardString = resources.getStringArray(R.array.wizards)
         val imageArray = intArrayOf(
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur,
-            R.drawable.niffleur
+            R.drawable.dumbledore,
+            R.drawable.hagrid,
+            R.drawable.harry_potter,
+            R.drawable.ron_weasley,
+            R.drawable.hermione_granger,
+            R.drawable.severus_rogue,
+            R.drawable.voldemort,
+            R.drawable.drago_malefoy,
+            R.drawable.macgonagall,
         )
+
         for (i in wizardString.indices) {
             items.add(Wizard(wizardString[i], imageArray[i]))
         }

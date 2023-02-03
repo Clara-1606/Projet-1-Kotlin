@@ -88,5 +88,18 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_quiz">Quiz</string>
+    <string name="menu_spells">Spells</string>
+
+    <string name="spell_accio">Bring something to the spell caster</string>
+    <string name="spell_allohomora">Open a locked door</string>
+    <string name="spell_amplificatum">Make an object bigger</string>
+    <string name="spell_avada_kedavra">Kill someone (forbidden spell)</string>
+    <string name="spell_collaporta">Seal a door</string>
+    <string name="spell_crac_badaboum">Break an object</string>
+    <string name="spell_destructum">Destroy something</string>
+    <string name="spell_diffinito">Cut something</string>
+    <string name="spell_dissensium">Open a secret way</string>
+    <string name="spell_ectoplasmus">Take something off</string>
+    <string name="spell_elasticus">Jump very high</string>
 
 </resources>

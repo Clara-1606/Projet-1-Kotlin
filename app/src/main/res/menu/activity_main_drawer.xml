@@ -11,5 +11,9 @@
             android:id="@+id/nav_personal_info"
             android:title="@string/menu_quiz" />
 
+        <item
+            android:id="@+id/nav_spells"
+            android:title="@string/menu_spells" />
+
     </group>
 </menu>

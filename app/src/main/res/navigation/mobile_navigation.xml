@@ -32,11 +32,11 @@
         android:label="@string/menu_quiz"
         tools:layout="@layout/fragment_quiz" >
         <action
-            android:id="@+id/action_nav_quiz_to_nav_gallery"
-            app:destination="@id/nav_quiz" />
-        <action
             android:id="@+id/action_nav_quiz_to_nav_result"
             app:destination="@id/nav_result" />
+        <action
+            android:id="@+id/action_nav_quiz_to_nav_personal_info"
+            app:destination="@id/nav_personal_info" />
     </fragment>
 
     <fragment
@@ -44,4 +44,10 @@
         android:name="com.ynov.firstproject.ui.result.ResultFragment"
         android:label="@string/menu_quiz"
         tools:layout="@layout/fragment_result" />
+
+    <fragment
+        android:id="@+id/nav_spells"
+        android:name="com.ynov.firstproject.ui.list.spells.SpellsFragment"
+        android:label="@string/menu_spells"
+        tools:layout="@layout/fragment_spells" />
 </navigation>

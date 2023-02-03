@@ -87,4 +87,16 @@
     <string name="menu_home">Accueil</string>
     <string name="menu_quiz">Quiz</string>
     <string name="menu_wizard">Liste de sorciers</string>
+    <string-array name="wizards">
+        <item>Dumbledore</item>
+        <item>Hagrid</item>
+        <item>Harry Potter</item>
+        <item>Ron Weasley</item>
+        <item>Hermione Granger</item>
+        <item>Severus Rogue</item>
+        <item>Dumbledore</item>
+        <item>Voldemort</item>
+        <item>Draco Malefoy</item>
+        <item>McGonagall</item>
+    </string-array>
 </resources>

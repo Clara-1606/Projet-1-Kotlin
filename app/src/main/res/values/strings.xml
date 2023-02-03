@@ -59,7 +59,7 @@
     <string name="answer_cadwallader">Cadwallader</string>
     <string name="answer_luna_lovegood">Luna Lovegood</string>
     <string name="answer_cho_chang">Cho Chang</string>
-    <string name="answer_filius_flitwick">"Filius Flitwick "</string>
+    <string name="answer_filius_flitwick">Filius Flitwick </string>
     <string name="answer_sibyl_trelawney">Sibyl Trelawney</string>
     <string name="text_toast_error">2 answers max</string>
     <string name="answer_mandatory">Please input an answer</string>
@@ -86,5 +86,17 @@
     <string name="menu_home">Home</string>
     <string name="menu_quiz">Quiz</string>
     <string name="menu_wizard">Wizard List</string>
+    <string-array name="wizards">
+        <item>Dumbledore</item>
+        <item>Hagrid</item>
+        <item>Harry Potter</item>
+        <item>Ron Weasley</item>
+        <item>Hermione Granger</item>
+        <item>Severus Rogue</item>
+        <item>Dumbledore</item>
+        <item>Voldemort</item>
+        <item>Draco Malefoy</item>
+        <item>McGonagall</item>
+    </string-array>
 
 </resources>

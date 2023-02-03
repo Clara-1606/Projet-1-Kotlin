@@ -44,4 +44,10 @@
         android:name="com.ynov.firstproject.ui.result.ResultFragment"
         android:label="@string/menu_quiz"
         tools:layout="@layout/fragment_result" />
+
+    <fragment
+        android:id="@+id/nav_list_wizard"
+        android:name="com.ynov.firstproject.ui.lists.wizards.ListWizardFragment"
+        android:label="@string/menu_wizard"
+        tools:layout="@layout/fragment_list_wizard" />
 </navigation>

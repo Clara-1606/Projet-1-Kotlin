@@ -1,8 +1,8 @@
-package com.ynov.firstproject.ui.list.spells
+package com.ynov.firstproject.ui.lists.spells
 
 import androidx.lifecycle.ViewModel
 import com.ynov.firstproject.R
-import com.ynov.firstproject.list.model.Spell
+import com.ynov.firstproject.lists.model.Spell
 
 class SpellsViewModel : ViewModel() {
     val spells = listOf<Spell>(

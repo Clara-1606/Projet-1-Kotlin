@@ -43,11 +43,21 @@
         android:id="@+id/nav_result"
         android:name="com.ynov.firstproject.ui.result.ResultFragment"
         android:label="@string/menu_quiz"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_nav_result_to_nav_personal_info"
+            app:destination="@id/nav_personal_info" />
+    </fragment>
 
     <fragment
+        android:id="@+id/nav_list_wizard"
+        android:name="com.ynov.firstproject.ui.lists.wizards.ListWizardFragment"
+        android:label="@string/menu_wizard"
+        tools:layout="@layout/fragment_list_wizard" />
+        
+    <fragment
         android:id="@+id/nav_spells"
-        android:name="com.ynov.firstproject.ui.list.spells.SpellsFragment"
+        android:name="com.ynov.firstproject.ui.lists.spells.SpellsFragment"
         android:label="@string/menu_spells"
         tools:layout="@layout/fragment_spells" />
 </navigation>

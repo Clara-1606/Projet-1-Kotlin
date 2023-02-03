@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Premier Projet</string>
+    <string name="app_name">Leviosa</string>
     <string name="text_on_create">Méthode onCreate() appelée</string>
     <string name="text_on_start">Méthode onStart() appelée</string>
     <string name="text_on_resume">Méthode onResume() appelée</string>
@@ -55,7 +55,7 @@
     <string name="answer_neville">Neville</string>
     <string name="answer_severus_rogue">Severus Rogue</string>
     <string name="answer_tom_jedusor">Tom Jedusor</string>
-    <string name="answer_draco_malefoy">Draco Malefoy</string>
+    <string name="answer_draco_malefoy">Drago Malefoy</string>
     <string name="answer_cadwallader">Cadwallader</string>
     <string name="answer_luna_lovegood">Luna Lovegood</string>
     <string name="answer_cho_chang">Cho Chang</string>
@@ -67,8 +67,8 @@
     <string name="text_button_comment">Ajouter</string>
     <string name="text_comment">Commentaire :</string>
     <string name="edit_text_comment">Votre commentaire</string>
-    <string name="text_win">"Féliciations "</string>
-    <string name="text_be">"vous êtes "</string>
+    <string name="text_win">Féliciations </string>
+    <string name="text_be">vous êtes </string>
     <string name="griffondor">Griffondor</string>
     <string name="serdaigle">Serdaigle</string>
     <string name="poufsouffle">Poufsouffle</string>
@@ -79,18 +79,26 @@
     <string name="name_placeholder">Votre prénom</string>
     <string name="personal_infos_label">Information personnelle</string>
     <string name="start_quizz">Commencer</string>
-    <string name="title_activity_launcher">LauncherActivity</string>
     <string name="navigation_drawer_open">Ouvrir menu lateral</string>
     <string name="navigation_drawer_close">Fermer menu lateral</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Pou De Lard</string>
     <string name="nav_header_desc">Bandeau de navigation</string>
     <string name="action_settings">Paramètres</string>
-
-    <string name="menu_home">Acceuil</string>
+    <string name="menu_home">Accueil</string>
     <string name="menu_quiz">Quiz</string>
-    <string name="menu_spells">Sorts</string>
-
+    <string name="menu_wizard">Liste de sorciers</string>
+    <string-array name="wizards">
+        <item>Dumbledore</item>
+        <item>Hagrid</item>
+        <item>Harry Potter</item>
+        <item>Ron Weasley</item>
+        <item>Hermione Granger</item>
+        <item>Severus Rogue</item>
+        <item>Voldemort </item>
+        <item>Drago Malefoy</item>
+        <item>McGonagall</item>
+    </string-array>
+    <string name="menu_spells">Liste de sortilèges</string>
     <string name="spell_accio">Attirer quelque chose</string>
     <string name="spell_allohomora">Ouvrir une porte verouillée</string>
     <string name="spell_amplificatum">Grossir un objet</string>
@@ -102,4 +110,5 @@
     <string name="spell_dissensium">Ouvrir un passage secret</string>
     <string name="spell_ectoplasmus">Decoller quelque chose</string>
     <string name="spell_elasticus">Sauter très haut</string>
+    <string name="text_button_retry"> Recommencer </string>
 </resources>

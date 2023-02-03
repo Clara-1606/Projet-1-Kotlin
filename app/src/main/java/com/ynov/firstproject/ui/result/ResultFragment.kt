@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.os.bundleOf
 import com.ynov.firstproject.R
 import com.ynov.firstproject.databinding.FragmentResultBinding
 import com.ynov.firstproject.quiz.result.ResultHelper
+import androidx.navigation.fragment.findNavController
 
 class ResultFragment : Fragment() {
 
@@ -34,6 +36,9 @@ class ResultFragment : Fragment() {
         val root: View = binding.root
 
         binding.buttonAdd.setOnClickListener{add()}
+        binding.restartQuestionsButton.setOnClickListener {
+            restartQuiz()
+        }
 
         val textResult = binding.result
         val imageView = binding.imageView
@@ -43,7 +48,7 @@ class ResultFragment : Fragment() {
         val name = requireArguments().getString("NAME")
         imageView.setImageResource(image)
 
-        textResult.text = getString(R.string.text_win) + name +  " " + getString(R.string.text_be) + getString(result) + " !!"
+        textResult.text = getString(R.string.text_win) +  " " + name +  " " + getString(R.string.text_be) +  " " + getString(result) + " !!"
 
         return root
     }
@@ -72,4 +77,8 @@ class ResultFragment : Fragment() {
         _binding = null
     }
 
+    private fun restartQuiz() {
+        val bundle = bundleOf()
+        findNavController().navigate(R.id.action_nav_result_to_nav_personal_info)
+    }
 }

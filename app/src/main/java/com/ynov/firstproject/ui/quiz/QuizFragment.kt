@@ -136,6 +136,7 @@ class QuizFragment : Fragment() {
             )
         )
 
+        // Randomize questions
         questions.shuffle();
 
         val currentQuestion = binding.lastQuestionNumber

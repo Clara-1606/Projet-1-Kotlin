@@ -14,8 +14,9 @@
         <activity
             android:name=".LauncherActivity"
             android:exported="true"
-            android:label="@string/title_activity_launcher"
-            android:theme="@style/Theme.FirstProjectYnov2023.NoActionBar">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.FirstProjectYnov2023.NoActionBar"
+             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

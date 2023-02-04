@@ -7,10 +7,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.ynov.firstproject.R
+import com.ynov.firstproject.data.UserPreferences
 import com.ynov.firstproject.databinding.FragmentPersonalInfosBinding
+import com.ynov.firstproject.repository.UserPreferencesRepository
+import com.ynov.firstproject.ui.settings.SettingsViewModel
 
 class PersonalInfosFragment : Fragment() {
 
@@ -26,10 +30,16 @@ class PersonalInfosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val personnalInfosViewModel =
-            ViewModelProvider(this).get(PersonnalInfosViewModel::class.java)
+            PersonnalInfosViewModel(UserPreferencesRepository(requireContext()))
 
         _binding = FragmentPersonalInfosBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val nameObserver = Observer<String?> { userName ->
+            binding.inputName.setText(userName)
+        }
+
+        personnalInfosViewModel.userName.observe(viewLifecycleOwner, nameObserver)
 
         binding.startQuestionsButton.setOnClickListener {
             playQuiz()
@@ -38,7 +48,7 @@ class PersonalInfosFragment : Fragment() {
         return root
     }
 
-    fun playQuiz(){
+    private fun playQuiz(){
         val textInput = binding.inputName
         if (textInput.text.isNotEmpty() && textInput.text.isNotBlank()) {
             val bundle = bundleOf()

@@ -110,4 +110,6 @@
     <string name="spell_ectoplasmus">Take something off</string>
     <string name="spell_elasticus">Jump very high</string>
     <string name="text_button_retry"> Retry </string>
+    <string name="text_settings_saved"> Settings saved </string>
+    <string name="text_settings_unset"> Please input all the fields </string>
 </resources>

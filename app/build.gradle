@@ -76,5 +76,13 @@ dependencies {
     // Library for gif
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
+    // Data store libraries
+
+        // Preferences DataStore (SharedPreferences like APIs)
+        implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+        // Typed DataStore (Typed API surface, such as Proto)
+        implementation("androidx.datastore:datastore:1.0.0")
+
 }
 

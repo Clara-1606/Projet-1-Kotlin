@@ -57,6 +57,11 @@ For the part concerning the lists of elements, we wanted to make the 2 possibili
 - With the RecyclerView and Adapter (with wizard list)
 - With Compose (with the list of spells)
 
+#### Settings
+The settings page allows you to input your name so you don't have to do it each time you launch a new quiz.
+
+This feature is implemented using the preferences datastore and can be accessed via a menu located on the top right of the app.
+
 ### Showtime
 Here is a simple demonstration of how the app is designed to be used, starting from the home screen to the end result :
 
@@ -77,3 +82,10 @@ Here is a simple demonstration of how the app is designed to be used, starting f
 <img src="./readme_images/wizards.jpg" alt="drawing" width="200"/>
 
 <img src="./readme_images/spells.jpg" alt="drawing" width="200"/>
+
+#### V3 (Settings)
+<img src="./readme_images/personal_infos_name_persistence.png" alt="drawing" width="200"/>
+
+<img src="./readme_images/settings_menu.png" alt="drawing" width="200"/>
+
+<img src="./readme_images/settings.png" alt="drawing" width="200"/>

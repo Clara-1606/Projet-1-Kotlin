@@ -139,13 +139,13 @@ This feature is implemented using the preferences datastore and can be accessed 
 Here is a simple demonstration of how the app is designed to be used, starting from the home screen to the end result :
 
 ### V1 (only first project and quiz) (27/01/2023)
-<img src="./readme_images/gifv1.gif" alt="gifV1" width="200" />
+<img src="./readme_images/gifV1.gif" alt="gifV1" width="200" />
 
 ### V2 (menu and lists) (03/02/2023)
-<img src="./readme_images/gifv1.gif" alt="gifV2" width="200" />
+<img src="./readme_images/gifV1.gif" alt="gifV2" width="200" />
 
 ### V3 (Settings) (09/02/2023 at 12h30)
-<img src="./readme_images/gifv1.gif" alt="gifV3" width="200" />
+<img src="./readme_images/gifV1.gif" alt="gifV3" width="200" />
 
 
 ## Coming 

@@ -40,7 +40,9 @@ class SettingsFragment : Fragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
         val nameObserver = Observer<UserPreferences> { userPreference ->
-            binding.settingsInputName.setText(userPreference.name)
+            if (userPreference.name != "null") {
+                binding.settingsInputName.setText(userPreference.name)
+            }
         }
 
         viewModel.userPreference.observe(viewLifecycleOwner, nameObserver)

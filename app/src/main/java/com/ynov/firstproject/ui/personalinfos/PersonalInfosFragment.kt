@@ -36,7 +36,9 @@ class PersonalInfosFragment : Fragment() {
         val root: View = binding.root
 
         val nameObserver = Observer<String?> { userName ->
-            binding.inputName.setText(userName)
+            if (userName != "null") {
+                binding.inputName.setText(userName)
+            }
         }
 
         personnalInfosViewModel.userName.observe(viewLifecycleOwner, nameObserver)

@@ -7,18 +7,17 @@
 
 ## Table des matières
 
-1. [Getting Started](#Getting-Started)
-2. [Contexte](#Contexte)
-3. [Introduction](#Introduction)
-4. [Contributors](#Contributors)
-5. [Project presentation](#Project-presentation)
-6. [Technologies](#Technologies)  
-7. [Architecture](#Architecture)  
-8. [Dependencies](#Dependencies)  
-9. [Showtime](#Showtime)  
-10. [Showtime](#Showtime)  
-11. [Coming](#Coming) 
-12. [Contact](#Contact)  
+1. [Getting Started](#getting-started)
+2. [Contexte](#contexte)
+3. [Introduction](#introduction)
+4. [Contributors](#contributors)
+5. [Best Practices](#best-practices)
+6. [Technologies](#technologies)  
+7. [Architecture](#architecture)  
+8. [Dependencies](#dependencies)  
+9. [Showtime](#showtime)  
+10. [Coming](#coming) 
+11. [Contact](#contact)  
 
 ## Getting Started
 
@@ -140,14 +139,13 @@ This feature is implemented using the preferences datastore and can be accessed 
 Here is a simple demonstration of how the app is designed to be used, starting from the home screen to the end result :
 
 ### V1 (only first project and quiz) (27/01/2023)
-![GIF demoV1](./readme_images/gifv1.gif)
-
+<img src="./readme_images/gifv1.gif" alt="gifV1" width="200" />
 
 ### V2 (menu and lists) (03/02/2023)
-![GIF demoV2](./readme_images/gifv2.gif)
+<img src="./readme_images/gifv1.gif" alt="gifV2" width="200" />
 
 ### V3 (Settings) (09/02/2023 at 12h30)
-![GIF demoV3](./readme_images/gifv3.gif)
+<img src="./readme_images/gifv1.gif" alt="gifV3" width="200" />
 
 
 ## Coming 

@@ -142,10 +142,10 @@ Here is a simple demonstration of how the app is designed to be used, starting f
 <img src="./readme_images/gifV1.gif" alt="gifV1" width="200" />
 
 ### V2 (menu and lists) (03/02/2023)
-<img src="./readme_images/gifV1.gif" alt="gifV2" width="200" />
+<img src="./readme_images/gifV2.gif" alt="gifV2" width="200" />
 
 ### V3 (Settings) (09/02/2023 at 12h30)
-<img src="./readme_images/gifV1.gif" alt="gifV3" width="200" />
+<img src="./readme_images/gifV3.gif" alt="gifV3" width="200" />
 
 
 ## Coming 
